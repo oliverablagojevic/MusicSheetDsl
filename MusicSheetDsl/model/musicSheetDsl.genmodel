@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/MusicSheetDsl/src-gen" creationIcons="false" editDirectory="/MusicSheetDsl.edit/src-gen"
+    editorDirectory="/MusicSheetDsl.editor/src-gen" modelPluginID="MusicSheetDsl"
+    modelName="MusicSheetDsl" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>musicSheetDsl.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="MusicSheetDsl" disposableProviderFactory="true" ecorePackage="musicSheetDsl.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="musicSheetDsl.ecore#//BracketType">
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//BracketType/square"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//BracketType/curly"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="musicSheetDsl.ecore#//RestType">
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//RestType/whole"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//RestType/half"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//RestType/quarter"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//RestType/eighth"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//RestType/sixteenth"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//RestType/thirtysecond"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//RestType/sixtyfourth"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="musicSheetDsl.ecore#//RepetitionType">
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//RepetitionType/left"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//RepetitionType/right"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="musicSheetDsl.ecore#//AccidentalType">
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//AccidentalType/sharp"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//AccidentalType/flat"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//AccidentalType/natural"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="musicSheetDsl.ecore#//OrnamentType">
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//OrnamentType/slide"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//OrnamentType/glissando"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//OrnamentType/aciaccatura"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//OrnamentType/appoggiatura"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//OrnamentType/turn"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//OrnamentType/mordent"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//OrnamentType/trill"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="musicSheetDsl.ecore#//NoteDuration">
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteDuration/whole"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteDuration/half"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteDuration/quarter"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteDuration/eighth"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteDuration/sixteenth"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteDuration/thirtysecond"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteDuration/sixtyfourth"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="musicSheetDsl.ecore#//NoteName">
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteName/c"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteName/d"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteName/e"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteName/f"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteName/g"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteName/a"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//NoteName/b"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="musicSheetDsl.ecore#//ArticulationType">
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//ArticulationType/detached"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//ArticulationType/legato"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//ArticulationType/staccato"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//ArticulationType/portato"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//ArticulationType/tenuto"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//ArticulationType/marcato"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="musicSheetDsl.ecore#//ClefType">
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//ClefType/violin"/>
+      <genEnumLiterals ecoreEnumLiteral="musicSheetDsl.ecore#//ClefType/bass"/>
+    </genEnums>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Composition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Composition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Composition/author"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Composition/instrument"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Composition/tonality"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Composition/soundTempo"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference musicSheetDsl.ecore#//Composition/bracket"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference musicSheetDsl.ecore#//Composition/staff"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Bracket">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Bracket/type"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference musicSheetDsl.ecore#//Bracket/staves"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Staff">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Staff/number"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference musicSheetDsl.ecore#//Staff/elements"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference musicSheetDsl.ecore#//Staff/time"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference musicSheetDsl.ecore#//Staff/clef"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//StaffElement"/>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//TimeSignature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//TimeSignature/beat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//TimeSignature/beatType"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Clef">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Clef/type"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Accidental">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Accidental/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Accidental/position"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Articulation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Articulation/type"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Repetition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Repetition/type"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Rest">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Rest/type"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Ornament">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Ornament/type"/>
+    </genClasses>
+    <genClasses ecoreClass="musicSheetDsl.ecore#//Note">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Note/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Note/lyrics"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Note/duration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Note/position"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Note/fermata"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Note/dot"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference musicSheetDsl.ecore#//Note/ornament"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference musicSheetDsl.ecore#//Note/articulation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute musicSheetDsl.ecore#//Note/dynamic"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference musicSheetDsl.ecore#//Note/accidental"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

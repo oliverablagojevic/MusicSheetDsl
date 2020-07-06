@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="musicSheetDsl" nsURI="http://www.example.org/musicSheetDsl"
+    nsPrefix="musicSheetDsl">
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Composition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="instrument" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tonality" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="soundTempo" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bracket" upperBound="-1"
+        eType="#//Bracket" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="staff" upperBound="-1"
+        eType="#//Staff" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bracket">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//BracketType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="staves" lowerBound="2"
+        upperBound="-1" eType="#//Staff" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Staff">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" lowerBound="1"
+        upperBound="-1" eType="#//StaffElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="time" lowerBound="1" eType="#//TimeSignature"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clef" lowerBound="1" eType="#//Clef"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StaffElement" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="TimeSignature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beat" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="beatType" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Clef">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ClefType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Accidental" eSuperTypes="#//StaffElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//AccidentalType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Articulation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ArticulationType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Repetition" eSuperTypes="#//StaffElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RepetitionType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rest" eSuperTypes="#//StaffElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//RestType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ornament">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//OrnamentType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Note" eSuperTypes="#//StaffElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//NoteName"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lyrics" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="#//NoteDuration"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="position" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="fermata" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dot" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ornament" eType="#//Ornament"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="articulation" eType="#//Articulation"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="dynamic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="accidental" eType="#//Accidental"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="BracketType">
+    <eLiterals name="square"/>
+    <eLiterals name="curly" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RestType">
+    <eLiterals name="whole"/>
+    <eLiterals name="half" value="1"/>
+    <eLiterals name="quarter" value="2"/>
+    <eLiterals name="eighth" value="3"/>
+    <eLiterals name="sixteenth" value="4"/>
+    <eLiterals name="thirtysecond" value="5"/>
+    <eLiterals name="sixtyfourth" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RepetitionType">
+    <eLiterals name="left"/>
+    <eLiterals name="right" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="AccidentalType">
+    <eLiterals name="sharp"/>
+    <eLiterals name="flat" value="1"/>
+    <eLiterals name="natural" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="OrnamentType">
+    <eLiterals name="slide"/>
+    <eLiterals name="glissando" value="1"/>
+    <eLiterals name="aciaccatura" value="2"/>
+    <eLiterals name="appoggiatura" value="3"/>
+    <eLiterals name="turn" value="4"/>
+    <eLiterals name="mordent" value="5"/>
+    <eLiterals name="trill" value="8"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="NoteDuration">
+    <eLiterals name="whole"/>
+    <eLiterals name="half" value="1"/>
+    <eLiterals name="quarter" value="2"/>
+    <eLiterals name="eighth" value="3"/>
+    <eLiterals name="sixteenth" value="4"/>
+    <eLiterals name="thirtysecond" value="5"/>
+    <eLiterals name="sixtyfourth" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="NoteName">
+    <eLiterals name="c"/>
+    <eLiterals name="d" value="1"/>
+    <eLiterals name="e" value="2"/>
+    <eLiterals name="f" value="3"/>
+    <eLiterals name="g" value="4"/>
+    <eLiterals name="a" value="5"/>
+    <eLiterals name="b" value="6"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ArticulationType">
+    <eLiterals name="detached"/>
+    <eLiterals name="legato" value="1"/>
+    <eLiterals name="staccato" value="2"/>
+    <eLiterals name="portato" value="3"/>
+    <eLiterals name="tenuto" value="4"/>
+    <eLiterals name="marcato" value="5"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ClefType">
+    <eLiterals name="violin"/>
+    <eLiterals name="bass" value="1"/>
+  </eClassifiers>
+</ecore:EPackage>
