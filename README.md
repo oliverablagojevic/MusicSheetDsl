@@ -3,4 +3,4 @@ Domain-specific language Sheet Music modeling. The language allows the user to e
 After this, the user would get a .musicxml file that can run in most music editors and music compositing tools and get a graphical and audio representation of their music system.
 [Ecore, Xtext, Xtend]
 
-[Link](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
+
